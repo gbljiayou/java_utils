@@ -10,6 +10,7 @@
     <modules>
         <module>gson-util</module>
         <module>distributedId-util</module>
+        <module>qrCode-util</module>
     </modules>
     <name>${project.artifactId}</name>
 
