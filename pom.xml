@@ -5,7 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.gbl</groupId>
     <artifactId>java_utils</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>gson-util</module>
+    </modules>
     <name>${project.artifactId}</name>
 
     <properties>
