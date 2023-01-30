@@ -1,5 +1,3 @@
-package com.gbl.utils;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -8,7 +6,7 @@ import org.slf4j.LoggerFactory;
  *
  * @author gbl
  */
-public class DistributedIdUtils {
+public class DistributedIdUtil {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     //下面两个每个5位，加起来就是10位的工作机器id
 
@@ -45,7 +43,7 @@ public class DistributedIdUtils {
     //上次时间戳，初始值为负数
     private long lastTimestamp = -1L;
 
-    public DistributedIdUtils(long workerId, long datacenterId, long sequence) {
+    public DistributedIdUtil(long workerId, long datacenterId, long sequence) {
         // sanity check for workerId
         if (workerId > maxWorkerId || workerId < 0) {
             throw new IllegalArgumentException(String.format("worker Id can't be greater than %d or less than 0", maxWorkerId));
@@ -128,7 +126,7 @@ public class DistributedIdUtils {
     }
 
     public static void main(String[] args) {
-        DistributedIdUtils worker = new DistributedIdUtils(1, 1, 1);
+        DistributedIdUtil worker = new DistributedIdUtil(1, 1, 1);
         for (int i = 0; i < 30; i++) {
             System.out.println(worker.nextId());
         }
